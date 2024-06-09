@@ -9,7 +9,7 @@ import CarCard from "../components/CarCard"; // Import CarCard
 
 const Details = ({ cars }) => {
   const { carId } = useParams();
-  const [showChat, setShowChat] = useState(false);
+  const [showChat, setShowChat] = useState(true);
   const selectedCar = cars.find((car) => car.id === Number(carId));
 
   if (!selectedCar) {
@@ -38,7 +38,7 @@ const Details = ({ cars }) => {
               onClick={() => setShowChat(true)}
             >
               <span className="text-lg font-bold">
-                <IoChatboxOutline size={24} className="mr-2" /> Chat
+              Chat
               </span>
             </button>
             <span className="font-semibold text-indigo-500">Details</span>

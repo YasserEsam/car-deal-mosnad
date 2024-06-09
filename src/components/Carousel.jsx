@@ -46,12 +46,12 @@ const Carousel = () => {
               alt={`slide ${index + 1}`}
             />
             <div className="content absolute top-1/4 w-11/12 max-w-4xl left-1/2 transform -translate-x-1/2 pr-1/3 text-white text-shadow-lg">
-              <div className="author font-bold tracking-widest">LUNDEV</div>
+              <div className="author font-bold tracking-widest">Mosnad</div>
               <div className="title text-5xl font-bold leading-tight mt-4">
-                DESIGN SLIDER
+                Hit the road
               </div>
               <div className="topic text-5xl font-bold leading-tight text-orange-600 mt-4">
-                ANIMAL
+                with Ur Car
               </div>
               <div className="des mt-4 text-sm">
                 Lorem ipsum dolor sit amet consectetur adipisicing elit. Ut
