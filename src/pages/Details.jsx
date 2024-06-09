@@ -3,9 +3,9 @@ import { Link, useParams } from "react-router-dom";
 import ImageSlider from "../components/ImageSlider";
 import { IoIosArrowRoundForward } from "react-icons/io";
 import Footer from "../components/Footer";
-import { IoChatboxOutline } from "react-icons/io5";
 import Chat from "../components/Chat";
-import CarCard from "../components/CarCard"; // Import CarCard
+import CarCard from "../components/CarCard"; 
+import ShareButton from "../components/ShareButton"; 
 
 const Details = ({ cars }) => {
   const { carId } = useParams();
@@ -25,6 +25,9 @@ const Details = ({ cars }) => {
     selectedCar.seller.otherCars.includes(car.id)
   );
 
+  const pageUrl = window.location.href;
+  const pageTitle = `Check out this car: ${selectedCar.title}`;
+
   return (
     <div>
       <div className="w-11/12 md:w-4/5 m-auto py-10 flex flex-col md:flex-row justify-between md:space-x-10">
@@ -37,9 +40,7 @@ const Details = ({ cars }) => {
               className="px-4 py-2 flex justify-center items-center rounded-md bg-indigo-500 text-white mt-4"
               onClick={() => setShowChat(true)}
             >
-              <span className="text-lg font-bold">
-              Chat
-              </span>
+              <span className="text-lg font-bold">Chat</span>
             </button>
             <span className="font-semibold text-indigo-500">Details</span>
           </p>
@@ -52,6 +53,8 @@ const Details = ({ cars }) => {
         </div>
         <div className="md:w-1/2 flex flex-col justify-between p-4">
           <div className="py-5 border-b space-y-2">
+          <ShareButton url={pageUrl} title={pageTitle} />
+
             <h1 className="text-2xl font-semibold">
               Specification & Condition
             </h1>
